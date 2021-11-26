@@ -3,6 +3,7 @@ import TypeIt from "typeit-react";
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
+  const strings = ['Wake up Neo...', 'The Matrix has you...', 'Follow the white rabbit.', 'Knock, knock, Neo.']
   return (
     <>
       <Head>
@@ -12,11 +13,30 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <TypeIt options={{
-          strings: ["Wake up Neo...", "The Matrix has you"],
-          speed: 100,
-          waitUntilVisible: true,
-        }} />
+        <TypeIt
+          cursor={false}
+          getBeforeInit={(instance) => {
+            instance
+            .type(strings[0])
+            .pause(750)
+            .delete(strings[0].length)
+            .pause(500)
+            .type(strings[1])
+            .pause(750)
+            .delete(strings[1].length)
+            .pause(500)
+            .type(strings[2])
+            .pause(750)
+            .delete(strings[2].length)
+            .pause(500)
+            .type(strings[3])
+            .pause(750)
+            .delete(strings[3].length)
+            .pause(500);
+
+            return instance;
+          }}
+        />
       </main>
     </>
   )
