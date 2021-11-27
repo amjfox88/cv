@@ -14,7 +14,6 @@ export default function Home() {
 
       <main className={styles.main}>
         <TypeIt
-          cursor={false}
           getBeforeInit={(instance) => {
             instance
             .type(strings[0])
