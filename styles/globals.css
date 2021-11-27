@@ -2,8 +2,8 @@ html,
 body {
   padding: 50px 20px;
   margin: 0;
-  font-family: Courier, serif;
-  color: #33c643;
+  font-family: monospace;
+  color: #79cd82;
   background-color: black;
 }
 
@@ -14,8 +14,4 @@ a {
 
 * {
   box-sizing: border-box;
-}
-
-:root{
-  --ti-cursor-font-weight: 900;
 }
