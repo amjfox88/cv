@@ -3,6 +3,9 @@ import TypeIt from "typeit-react";
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
+  const Strong = ({children}) => {
+    return <strong style={{fontWeight: 'bold'}}>{children}</strong>
+}
   const strings = ['Wake up Neo...', 'The Matrix has you...', 'Follow the white rabbit.', 'Knock, knock, Neo.']
   return (
     <>
